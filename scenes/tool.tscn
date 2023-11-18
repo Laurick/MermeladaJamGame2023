@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pvvfj764nndo"]
+
+[ext_resource type="Script" path="res://scripts/tool.gd" id="1_l715a"]
+
+[node name="tool" type="TextureRect"]
+script = ExtResource("1_l715a")

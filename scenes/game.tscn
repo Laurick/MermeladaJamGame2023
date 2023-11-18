@@ -1,0 +1,112 @@
+[gd_scene load_steps=26 format=3 uid="uid://cg6vyukprhaid"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_ff38m"]
+[ext_resource type="Texture2D" uid="uid://b5eyuf6ic8shf" path="res://images/caja.png" id="2_foy7i"]
+[ext_resource type="Script" path="res://scenes/game_intro.gd" id="2_j3tni"]
+[ext_resource type="Resource" uid="uid://c48r2s7pcexe2" path="res://assets/tool1.tres" id="2_pxquy"]
+[ext_resource type="Resource" uid="uid://gmko6n0vpn3s" path="res://assets/tool1a.tres" id="3_1br1l"]
+[ext_resource type="Texture2D" uid="uid://duylwkpx6jsfr" path="res://images/objetos.png" id="3_3ifbq"]
+[ext_resource type="Texture2D" uid="uid://tlmy3pn36gq7" path="res://images/barratiempo.png" id="4_2nt25"]
+[ext_resource type="Resource" uid="uid://k2uu4fq3kyk7" path="res://assets/tool2.tres" id="4_i0fqd"]
+[ext_resource type="Resource" uid="uid://brs6aqtsd1w4y" path="res://assets/tool2a.tres" id="5_a21bo"]
+[ext_resource type="Resource" uid="uid://1g7566fbk4o3" path="res://assets/tool3.tres" id="6_h60qg"]
+[ext_resource type="Resource" uid="uid://cehoi1pribgmh" path="res://assets/tool3a.tres" id="7_u222p"]
+[ext_resource type="Resource" uid="uid://qux7gwkcscv2" path="res://assets/tool4.tres" id="8_7hodq"]
+[ext_resource type="Resource" uid="uid://djv6te038uryc" path="res://assets/tool4a.tres" id="9_veqpo"]
+[ext_resource type="Resource" uid="uid://bjdxyvepb142" path="res://assets/tool5.tres" id="10_86dy8"]
+[ext_resource type="Resource" uid="uid://brg6ncibfitv4" path="res://assets/tool5a.tres" id="11_nw8t3"]
+[ext_resource type="Resource" uid="uid://dw6c8chls4sgj" path="res://assets/tool6.tres" id="12_mpxot"]
+[ext_resource type="Resource" uid="uid://djralqbalw0pe" path="res://assets/tool6a.tres" id="13_dtl7l"]
+[ext_resource type="Resource" uid="uid://cv4rx4lk2qtj2" path="res://assets/tool7.tres" id="14_gok6r"]
+[ext_resource type="Resource" uid="uid://y18frr1xc0xq" path="res://assets/tool7a.tres" id="15_q2heh"]
+[ext_resource type="Resource" uid="uid://b8rhhhkpo7h50" path="res://assets/tool8.tres" id="16_qrmkb"]
+[ext_resource type="Resource" uid="uid://cdtuvudwhmxnh" path="res://assets/tool8a.tres" id="17_ncv3y"]
+[ext_resource type="Resource" uid="uid://b7v2dcbpmfe77" path="res://assets/tool9.tres" id="18_0qslp"]
+[ext_resource type="Resource" uid="uid://wq7dx4wbifmb" path="res://assets/tool9a.tres" id="19_qxqrv"]
+[ext_resource type="Resource" uid="uid://baitt4pgiovwe" path="res://assets/tool10.tres" id="20_bkgjq"]
+[ext_resource type="Resource" uid="uid://4og4ex1q28fy" path="res://assets/tool10a.tres" id="21_7ncbv"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_ff38m")
+all_tools = Array[Resource("res://assets/tool.gd")]([ExtResource("2_pxquy"), ExtResource("3_1br1l"), ExtResource("4_i0fqd"), ExtResource("5_a21bo"), ExtResource("6_h60qg"), ExtResource("7_u222p"), ExtResource("8_7hodq"), ExtResource("9_veqpo")])
+stuff = Array[Resource("res://assets/tool.gd")]([ExtResource("10_86dy8"), ExtResource("11_nw8t3"), ExtResource("12_mpxot"), ExtResource("13_dtl7l"), ExtResource("14_gok6r"), ExtResource("15_q2heh"), ExtResource("16_qrmkb"), ExtResource("17_ncv3y"), ExtResource("18_0qslp"), ExtResource("19_qxqrv"), ExtResource("20_bkgjq"), ExtResource("21_7ncbv")])
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="game" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 31.0
+offset_bottom = -178.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="Control" type="MarginContainer" parent="game"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="game/Control"]
+layout_mode = 2
+texture = ExtResource("2_foy7i")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="game"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="game/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="background" type="TextureRect" parent="game/VBoxContainer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("3_3ifbq")
+stretch_mode = 3
+
+[node name="tool" type="TextureRect" parent="game/VBoxContainer/CenterContainer"]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="game/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("4_2nt25")
+
+[node name="Label" type="Label" parent="game/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "1/5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="intro" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_j3tni")
+
+[node name="TextureRect2" type="TextureRect" parent="intro"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="intro"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 103.0
+grow_vertical = 2
+text = "INTRO_GAME"
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="intro_pressed" from="intro" to="." method="_on_intro_intro_pressed"]

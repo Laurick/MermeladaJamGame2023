@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=3 format=3 uid="uid://cehoi1pribgmh"]
+
+[ext_resource type="Texture2D" uid="uid://dr4dyqdbr8k6o" path="res://images/herramienta_4.png" id="1_msxdo"]
+[ext_resource type="Script" path="res://assets/tool.gd" id="2_n2enf"]
+
+[resource]
+script = ExtResource("2_n2enf")
+name = "TOOL_4"
+image = ExtResource("1_msxdo")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://bayjbdtutt0wf"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_3akxr"]
+
+[node name="game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3akxr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1158.0
+offset_bottom = 648.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_right = 95.0
+offset_bottom = 648.0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "GAME_OVER"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

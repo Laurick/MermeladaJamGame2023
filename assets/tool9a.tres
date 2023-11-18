@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=3 format=3 uid="uid://wq7dx4wbifmb"]
+
+[ext_resource type="Texture2D" uid="uid://7418bvj65jeb" path="res://images/herramienta_9.png" id="1_ervim"]
+[ext_resource type="Script" path="res://assets/tool.gd" id="2_uofyo"]
+
+[resource]
+script = ExtResource("2_uofyo")
+name = "TOOL_9"
+image = ExtResource("1_ervim")
