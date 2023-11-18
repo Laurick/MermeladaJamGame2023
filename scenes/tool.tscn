@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://scripts/tool.gd" id="1_l715a"]
 
 [node name="tool" type="TextureRect"]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_l715a")

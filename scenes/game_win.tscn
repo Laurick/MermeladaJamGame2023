@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw3kr3vjbnytc"]
+[gd_scene load_steps=4 format=3 uid="uid://bw3kr3vjbnytc"]
 
 [ext_resource type="Script" path="res://scripts/game_win.gd" id="1_5goxp"]
+[ext_resource type="Theme" uid="uid://b0qdbfedic5wr" path="res://theme/default_theme.tres" id="2_d5x41"]
+[ext_resource type="Texture2D" uid="uid://6y3ge0yxb4qx" path="res://images/space.png" id="3_yd6m3"]
 
 [node name="win" type="Control"]
 layout_mode = 3
@@ -19,11 +21,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 9
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 86.0
+grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("2_d5x41")
 text = "GAME_WIN"
 vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+texture = ExtResource("3_yd6m3")

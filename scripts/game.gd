@@ -9,12 +9,11 @@ var tool_to_find: Tool
 
 const MAX_LEVEL:int = 5
 
-@onready var label_level: Label = $game/VBoxContainer/Label
+@onready var label_level: Label = $MarginContainer/game/VBoxContainer/Container3/Label
 @onready var timer: Timer = $Timer
-@onready var game: Node = $game
-@onready var box: Node = $game/Control/TextureRect
-@onready var tool_image: TextureRect = $game/VBoxContainer/CenterContainer/tool
-@onready var progress_timer: TextureProgressBar = $game/VBoxContainer/CenterContainer2/TextureRect
+@onready var game: Node = $MarginContainer
+@onready var box: Node = $MarginContainer/game/Control/TextureRect
+@onready var tool_image: TextureRect = $MarginContainer/game/VBoxContainer/Container/tool
 
 var playing = false
 
@@ -33,7 +32,7 @@ func start_new_level():
 	var tool_to_find_node = instantiate_new_tool_on_box(tool_to_find)
 	
 	# fill the box with objects
-	#add_stuff_to_box(tool_to_find)
+	add_stuff_to_box(tool_to_find)
 	
 	# movimiento del gato in
 	tool_to_find_node.position = Vector2(randi_range(0,200), randi_range(0,200))
@@ -46,13 +45,14 @@ func start_new_level():
 	label_level.text = "%d/%d" % [level,MAX_LEVEL]
 	timer.wait_time = 17 - (level*2)
 	timer.start()
-	progress_timer.max_value = 17 - (level*2)
-	progress_timer.value = 17 - (level*2)
+	# progress_timer.max_value = 17 - (level*2)
+	# progress_timer.value = 17 - (level*2)
 	playing = true
 	
 func _process(delta):
 	if playing:
-		progress_timer.value = timer.time_left
+		pass
+		#progress_timer.value = timer.time_left
 
 func add_stuff_to_box(tool_to_find:Tool):
 
@@ -91,7 +91,9 @@ func instantiate_new_tool_on_box(tool_to_spawn:Tool) -> Control:
 	var new_tool = tool_node.instantiate()
 	new_tool.setup(tool_to_spawn)
 	new_tool.tool_clicked.connect(_on_tool_clicked)
-	new_tool.position = Vector2(randi_range(0,200), randi_range(0,200))
+	print("box size: "+str(box.texture.get_size()))
+	var rect = box.texture.get_size();
+	new_tool.position = Vector2(randi_range(0, rect[0]), randi_range(0, rect[1]))
 	box.add_child(new_tool)
 	return new_tool
 

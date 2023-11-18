@@ -3,17 +3,16 @@
 [ext_resource type="Script" path="res://scripts/slider.gd" id="1_ywbnr"]
 
 [node name="slider" type="HBoxContainer"]
+theme_override_constants/separation = 0
 script = ExtResource("1_ywbnr")
 
 [node name="HSlider" type="HSlider" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-value = 50.0
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 2
-text = "50"
+size_flags_stretch_ratio = 3.0
+max_value = 20.0
+value = 10.0
 
 [connection signal="drag_ended" from="HSlider" to="." method="_on_h_slider_drag_ended"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

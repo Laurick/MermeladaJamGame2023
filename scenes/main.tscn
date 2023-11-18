@@ -1,88 +1,144 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmijyi8w5ui77"]
+[gd_scene load_steps=6 format=3 uid="uid://cmijyi8w5ui77"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_fq7yj"]
 [ext_resource type="PackedScene" uid="uid://cuv8mtn1eafl6" path="res://scenes/slider.tscn" id="2_s532l"]
-[ext_resource type="Script" path="res://scripts/credits_panel.gd" id="2_w2sgg"]
-[ext_resource type="AudioStream" uid="uid://dvl6wtuap0loi" path="res://sounds/music/Retro Comedy.ogg" id="4_8j87x"]
+[ext_resource type="Theme" uid="uid://b0qdbfedic5wr" path="res://theme/default_theme.tres" id="3_05ump"]
+[ext_resource type="Texture2D" uid="uid://6y3ge0yxb4qx" path="res://images/space.png" id="3_e3ewj"]
+[ext_resource type="FontFile" uid="uid://kx0t4qinp4yf" path="res://font/SS Rosehip.otf" id="3_jk2k7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1158.0
-offset_bottom = 650.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_fq7yj")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 2
-offset_right = 147.0
-offset_bottom = 650.0
-grow_vertical = 2
-size_flags_horizontal = 0
-alignment = 1
-
-[node name="ButtonPlay" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "PLAY_BUTTON"
-
-[node name="ButtonCredits" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "CREDITS_BUTTON"
-
-[node name="SliderMusic" parent="VBoxContainer" instance=ExtResource("2_s532l")]
-layout_mode = 2
-
-[node name="SliderFSX" parent="VBoxContainer" instance=ExtResource("2_s532l")]
-layout_mode = 2
-
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -394.0
-offset_top = -26.0
-grow_horizontal = 0
-grow_vertical = 0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -480.0
+offset_right = 480.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme = ExtResource("3_05ump")
+theme_override_fonts/font = ExtResource("3_jk2k7")
 text = "GAME_BY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="."]
-visible = false
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -103.0
 grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_w2sgg")
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_constants/separation = 75
+alignment = 1
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "CREDITS_TEXT_FONT"
+[node name="ButtonPlay" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_05ump")
+text = "PLAY_BUTTON"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="space4" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="space6" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="space7" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="space8" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_05ump")
+text = "MUSIC_OPTION"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_8j87x")
-volume_db = -27.532
-autoplay = true
-bus = &"Music"
+[node name="SliderFSX" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_s532l")]
+layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="AudioStreamPlayerFSX" type="AudioStreamPlayer" parent="."]
-volume_db = -30.0
-bus = &"FSX"
+[node name="space" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_05ump")
+text = "FX_OPTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SliderMusic" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_s532l")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="space2" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="space3" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="space9" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="space5" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("3_e3ewj")
+expand_mode = 3
+stretch_mode = 4
 
 [connection signal="pressed" from="VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/ButtonCredits" to="." method="_on_button_credits_pressed"]
-[connection signal="value_update" from="VBoxContainer/SliderMusic" to="." method="_on_slider_music_value_update"]
-[connection signal="value_setted" from="VBoxContainer/SliderFSX" to="." method="_on_slider_fsx_value_setted"]
+[connection signal="value_setted" from="VBoxContainer/HBoxContainer/SliderFSX" to="." method="_on_slider_fsx_value_setted"]
+[connection signal="value_update" from="VBoxContainer/HBoxContainer/SliderMusic" to="." method="_on_slider_music_value_update"]

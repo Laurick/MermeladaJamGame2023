@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b0qdbfedic5wr"]
+
+[ext_resource type="FontFile" uid="uid://cfbje8klbjyib" path="res://font/ShantellSans-Regular.ttf" id="1_0inrw"]
+
+[resource]
+Button/colors/font_color = Color(0.164706, 0, 0.34902, 1)
+Button/fonts/font = ExtResource("1_0inrw")
+Label/colors/font_color = Color(0.164706, 0, 0.34902, 1)
+Label/fonts/font = ExtResource("1_0inrw")

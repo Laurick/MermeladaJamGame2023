@@ -1,11 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700303184
+::res://::1700329389
 default_bus_layout.tres::AudioBusLayout::5319954085586188483::1700303184::0::1::::<><>::
 icon.svg::CompressedTexture2D::7092654526100041171::1700213738::1700213746::1::::<><>::
 README.md::TextFile::-1::1700214490::0::1::::<><>::
-texts.csv::Translation::3539721405596046753::1700270154::1700270189::1::::<><>::
-texts.en.translation::OptimizedTranslation::3539721405596046753::1700270189::0::1::::<><>::
-texts.es.translation::OptimizedTranslation::8177414405681050033::1700270189::0::1::::<><>::
+texts.csv::Translation::3539721405596046753::1700329017::1700329389::1::::<><>::
+texts.en.translation::OptimizedTranslation::3539721405596046753::1700329389::0::1::::<><>::
+texts.es.translation::OptimizedTranslation::8177414405681050033::1700329389::0::1::::<><>::
 ::res://assets/::1700265295
 tool1.tres::Resource/Resource::6877523699624007839::1700264082::0::1::::<><>::res://assets/tool.gd<>uid://dylhdne8x7qep
 tool1a.tres::Resource/Resource::446539415390110886::1700264099::0::1::::<><>::uid://cf2stya4tr115
@@ -28,7 +28,7 @@ tool9a.tres::Resource/Resource::1579134159089528061::1700264384::0::1::::<><>::u
 tool10.tres::Resource/Resource::2404124805305434036::1700264408::0::1::::<><>::uid://ct8jxeopw7epq
 tool10a.tres::Resource/Resource::2064794090867320862::1700264433::0::1::::<><>::uid://bium84q2wxgjy
 tool.gd::GDScript::-1::1700265295::0::1::::Tool<>Resource<>::
-::res://font/::1700258013
+::res://font/::1700329255
 ShantellSans-Bold.ttf::FontFile::5538913750192905770::1692985884::1700258013::1::::<><>::
 ShantellSans-BoldItalic.ttf::FontFile::436804842847771607::1692985884::1700258013::1::::<><>::
 ShantellSans-ExtraBold.ttf::FontFile::963229398748530821::1692985884::1700258013::1::::<><>::
@@ -41,11 +41,17 @@ ShantellSans-MediumItalic.ttf::FontFile::5581928978409118416::1692985884::170025
 ShantellSans-Regular.ttf::FontFile::5126405308661048233::1692985884::1700258013::1::::<><>::
 ShantellSans-SemiBold.ttf::FontFile::5929422228595640466::1692985884::1700258013::1::::<><>::
 ShantellSans-SemiBoldItalic.ttf::FontFile::6144086701419833228::1692985884::1700258013::1::::<><>::
-::res://images/::1700308057
+SS Rosehip Bold.otf::FontFile::1334332146017296232::1645735758::1700329255::1::::<><>::
+SS Rosehip BoldItalic.otf::FontFile::1477620957827225771::1645735761::1700329255::1::::<><>::
+SS Rosehip Italic.otf::FontFile::3230674384620923215::1645735763::1700329255::1::::<><>::
+SS Rosehip.otf::FontFile::750922527902557809::1645735755::1700329255::1::::<><>::
+::res://images/::1700326999
+barratiempo2.png::CompressedTexture2D::2295522477110459978::1700324901::1700324918::1::::<><>::
 barratiempo.png::CompressedTexture2D::1357069141839362032::1700248991::1700249121::1::::<><>::
 barratiempo._color.png::CompressedTexture2D::907643021608577441::1700307723::1700307741::1::::<><>::
 barratiempo_peq.png::CompressedTexture2D::7723649208408926531::1700308121::1700308122::1::::<><>::
 caja.png::CompressedTexture2D::4501836738427966499::1700249009::1700249121::1::::<><>::
+fondo.jpg::CompressedTexture2D::3102322895013838748::1700326987::1700326999::1::::<><>::
 herramienta_1.png::CompressedTexture2D::8866933520531968487::1700261630::1700262960::1::::<><>::
 herramienta_1a.png::CompressedTexture2D::5180651882794087634::1700261639::1700262960::1::::<><>::
 herramienta_2.png::CompressedTexture2D::2710145551160074995::1700261637::1700262960::1::::<><>::
@@ -67,25 +73,48 @@ herramienta_9a.png::CompressedTexture2D::7626794796113602227::1700261689::170026
 herramienta_10.png::CompressedTexture2D::6175141621020356830::1700261692::1700262960::1::::<><>::
 herramienta_10a.png::CompressedTexture2D::2990008072141706714::1700261665::1700262960::1::::<><>::
 objetos.png::CompressedTexture2D::8613291713816107867::1700248981::1700249121::1::::<><>::
-::res://scenes/::1700308080
-game.tscn::PackedScene::5259289122111634235::1700308080::0::1::::<><>::res://scripts/game.gd<>uid://b5eyuf6ic8shf::::res://images/caja.png<>res://scenes/game_intro.gd<>uid://c48r2s7pcexe2::::res://assets/tool1.tres<>uid://gmko6n0vpn3s::::res://assets/tool1a.tres<>uid://duylwkpx6jsfr::::res://images/objetos.png<>uid://k2uu4fq3kyk7::::res://assets/tool2.tres<>uid://brs6aqtsd1w4y::::res://assets/tool2a.tres<>uid://1g7566fbk4o3::::res://assets/tool3.tres<>uid://cehoi1pribgmh::::res://assets/tool3a.tres<>uid://qux7gwkcscv2::::res://assets/tool4.tres<>uid://djv6te038uryc::::res://assets/tool4a.tres<>uid://bjdxyvepb142::::res://assets/tool5.tres<>uid://brg6ncibfitv4::::res://assets/tool5a.tres<>uid://dw6c8chls4sgj::::res://assets/tool6.tres<>uid://djralqbalw0pe::::res://assets/tool6a.tres<>uid://cv4rx4lk2qtj2::::res://assets/tool7.tres<>uid://y18frr1xc0xq::::res://assets/tool7a.tres<>uid://b8rhhhkpo7h50::::res://assets/tool8.tres<>uid://cdtuvudwhmxnh::::res://assets/tool8a.tres<>uid://b7v2dcbpmfe77::::res://assets/tool9.tres<>uid://wq7dx4wbifmb::::res://assets/tool9a.tres<>uid://baitt4pgiovwe::::res://assets/tool10.tres<>uid://4og4ex1q28fy::::res://assets/tool10a.tres<>uid://m6w0ovywfi62::::res://images/barratiempo._color.png<>uid://dibnmymuxy7xf::::res://images/barratiempo_peq.png
+space.png::CompressedTexture2D::2227110259272099171::1700325043::1700325048::1::::<><>::
+::res://scenes/::1700329611
+audio.tscn::PackedScene::3817326071461464806::1700329611::0::1::::<><>::res://scripts/audio.gd
+game.tscn::PackedScene::5259289122111634235::1700329611::0::1::::<><>::res://scripts/game.gd<>uid://b5eyuf6ic8shf::::res://images/caja.png<>res://scenes/game_intro.gd<>uid://c48r2s7pcexe2::::res://assets/tool1.tres<>uid://gmko6n0vpn3s::::res://assets/tool1a.tres<>uid://duylwkpx6jsfr::::res://images/objetos.png<>uid://k2uu4fq3kyk7::::res://assets/tool2.tres<>uid://brs6aqtsd1w4y::::res://assets/tool2a.tres<>uid://1g7566fbk4o3::::res://assets/tool3.tres<>uid://cehoi1pribgmh::::res://assets/tool3a.tres<>uid://qux7gwkcscv2::::res://assets/tool4.tres<>uid://djv6te038uryc::::res://assets/tool4a.tres<>uid://bjdxyvepb142::::res://assets/tool5.tres<>uid://brg6ncibfitv4::::res://assets/tool5a.tres<>uid://dw6c8chls4sgj::::res://assets/tool6.tres<>uid://djralqbalw0pe::::res://assets/tool6a.tres<>uid://cv4rx4lk2qtj2::::res://assets/tool7.tres<>uid://y18frr1xc0xq::::res://assets/tool7a.tres<>uid://b8rhhhkpo7h50::::res://assets/tool8.tres<>uid://cdtuvudwhmxnh::::res://assets/tool8a.tres<>uid://b7v2dcbpmfe77::::res://assets/tool9.tres<>uid://wq7dx4wbifmb::::res://assets/tool9a.tres<>uid://baitt4pgiovwe::::res://assets/tool10.tres<>uid://4og4ex1q28fy::::res://assets/tool10a.tres<>uid://bkg12mm4y4a5y::::res://images/fondo.jpg<>uid://dylhdne8x7qep::::res://images/herramienta_1.png<>uid://m6w0ovywfi62::::res://images/barratiempo._color.png<>uid://b0qdbfedic5wr::::res://theme/default_theme.tres<>uid://6y3ge0yxb4qx::::res://images/space.png
 game_intro.gd::GDScript::-1::1700301462::0::1::::<>Control<>::
-game_over.tscn::PackedScene::2436514176375548381::1700308079::0::1::::<><>::res://scripts/game_over.gd
-game_win.tscn::PackedScene::3989016852773026368::1700308079::0::1::::<><>::res://scripts/game_win.gd
-main.tscn::PackedScene::5632212297269497344::1700308079::0::1::::<><>::res://scripts/main.gd<>uid://cuv8mtn1eafl6::::res://scenes/slider.tscn<>res://scripts/credits_panel.gd<>uid://dvl6wtuap0loi::::res://sounds/music/Retro Comedy.ogg
-slider.tscn::PackedScene::6221996282483039849::1700308080::0::1::::<><>::res://scripts/slider.gd
-tool.tscn::PackedScene::1097469096815031872::1700308079::0::1::::<><>::res://scripts/tool.gd
-::res://scripts/::1700307663
+game_over.tscn::PackedScene::2436514176375548381::1700329611::0::1::::<><>::res://scripts/game_over.gd<>uid://b0qdbfedic5wr::::res://theme/default_theme.tres<>uid://6y3ge0yxb4qx::::res://images/space.png
+game_win.tscn::PackedScene::3989016852773026368::1700329611::0::1::::<><>::res://scripts/game_win.gd<>uid://b0qdbfedic5wr::::res://theme/default_theme.tres<>uid://6y3ge0yxb4qx::::res://images/space.png
+main.tscn::PackedScene::5632212297269497344::1700329611::0::1::::<><>::res://scripts/main.gd<>uid://cuv8mtn1eafl6::::res://scenes/slider.tscn<>uid://b0qdbfedic5wr::::res://theme/default_theme.tres<>uid://6y3ge0yxb4qx::::res://images/space.png<>uid://kx0t4qinp4yf::::res://font/SS Rosehip.otf
+slider.tscn::PackedScene::6221996282483039849::1700329611::0::1::::<><>::res://scripts/slider.gd
+tool.tscn::PackedScene::1097469096815031872::1700329611::0::1::::<><>::res://scripts/tool.gd
+::res://scripts/::1700329031
+audio.gd::GDScript::-1::1700315765::0::1::::<>Node<>::
 constants.gd::GDScript::-1::1700267109::0::1::::<>Node<>::
 credits_panel.gd::GDScript::-1::1700267753::0::1::::<>Panel<>::
-game.gd::GDScript::-1::1700307663::0::1::::<>Node<>::
+game.gd::GDScript::-1::1700328721::0::1::::<>Node<>::
 game_over.gd::GDScript::-1::1700267754::0::1::::<>Node<>::
 game_win.gd::GDScript::-1::1700267754::0::1::::<>Node<>::
-main.gd::GDScript::-1::1700305386::0::1::::<>Control<>::
-slider.gd::GDScript::-1::1700305067::0::1::::<>HBoxContainer<>::
-tool.gd::GDScript::-1::1700267754::0::1::::<>TextureRect<>::
+main.gd::GDScript::-1::1700318429::0::1::::<>Control<>::
+slider.gd::GDScript::-1::1700329031::0::1::::<>HBoxContainer<>::
+tool.gd::GDScript::-1::1700326765::0::1::::<>TextureRect<>::
 ::res://sounds/::1700302571
-::res://sounds/fsx/::1700303675
+::res://sounds/fsx/::1700322089
 click3.ogg::AudioStreamOggVorbis::3249157068676397434::1637232360::1700303675::1::::<><>::
+::res://sounds/fsx/bardo/::1700322092
+msg145543273-140122.ogg::::-1::0::0::0::::<><>::
+msg145543273-140126.ogg::::-1::0::0::0::::<><>::
+::res://sounds/fsx/rothio/::1700322562
+audio_2023-11-18_16-47-31.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-47-37.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-47-41.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-47-44.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-47-48.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-47-51.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-47-54.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-47-58.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-48-01.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-48-04.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-48-07.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-48-11.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-48-13.ogg::::-1::0::0::0::::<><>::
+audio_2023-11-18_16-48-16.ogg::::-1::0::0::0::::<><>::
 ::res://sounds/music/::1700304143
 Retro Comedy.ogg::AudioStreamOggVorbis::8657858465875090760::1637232397::1700304143::1::::<><>::
+::res://theme/::1700329411
+default_theme.tres::Theme::4174356024424150757::1700329411::0::1::::<><>::uid://cfbje8klbjyib::::res://font/ShantellSans-Regular.ttf
