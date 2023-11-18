@@ -14,8 +14,14 @@ const MAX_LEVEL:int = 5
 @onready var game: Node = $game
 @onready var box: Node = $game/Control/TextureRect
 @onready var tool_image: TextureRect = $game/VBoxContainer/CenterContainer/tool
+@onready var progress_timer: TextureProgressBar = $game/VBoxContainer/CenterContainer2/TextureRect
+
+var playing = false
+
+var tool_node = load("res://scenes/tool.tscn")
 
 func start_new_level():
+	playing = false
 	#clear data
 	level_stuff.clear()
 	for child in box.get_children():
@@ -24,10 +30,32 @@ func start_new_level():
 	#pick random
 	var index_rand = randi_range(0,all_tools.size()-1)
 	tool_to_find = all_tools[index_rand]
+	var tool_to_find_node = instantiate_new_tool_on_box(tool_to_find)
 	
-	var tool_node = load("res://scenes/tool.tscn")
+	# fill the box with objects
+	#add_stuff_to_box(tool_to_find)
 	
-	#fill the box with objects
+	# movimiento del gato in
+	tool_to_find_node.position = Vector2(randi_range(0,200), randi_range(0,200))
+	# movimiento del gato out
+
+	
+	print("tool to find: "+tool_to_find.name)
+		
+	tool_image.texture = tool_to_find.image
+	label_level.text = "%d/%d" % [level,MAX_LEVEL]
+	timer.wait_time = 17 - (level*2)
+	timer.start()
+	progress_timer.max_value = 17 - (level*2)
+	progress_timer.value = 17 - (level*2)
+	playing = true
+	
+func _process(delta):
+	if playing:
+		progress_timer.value = timer.time_left
+
+func add_stuff_to_box(tool_to_find:Tool):
+
 	for i in range((2*level)+4):
 		var prob = randf() 
 		var tool_to_spawn:Tool = null
@@ -36,32 +64,19 @@ func start_new_level():
 		else:
 			while tool_to_find == tool_to_spawn or tool_to_spawn == null:
 				tool_to_spawn = all_tools[randi_range(0,all_tools.size()-1)]
-		var new_tool = tool_node.instantiate()
-		new_tool.setup(tool_to_spawn)
-		new_tool.tool_clicked.connect(_on_tool_clicked)
-		box.add_child(new_tool)
-	# movimiento del gato
-	# luego comenzar
-	print("tool to find: "+tool_to_find.name)
+		instantiate_new_tool_on_box(tool_to_spawn)
 		
-	tool_image.texture = tool_to_find.image
-	label_level.text = "%d/%d" % [level,MAX_LEVEL]
-	timer.wait_time = 17 - (level*2)
-	timer.start()
-
 func success_guess():
 	level+=1
-	if level > MAX_LEVEL:
+	if level <= MAX_LEVEL:
 		start_new_level()
 	else:
 		game_win()
 
 func game_over():
-	print("GAME OVER")
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	
 func game_win():
-	print("WIN!")
 	get_tree().change_scene_to_file("res://scenes/game_win.tscn")
 
 func _on_timer_timeout():
@@ -71,6 +86,14 @@ func _on_intro_intro_pressed():
 	level = 1
 	game.show()
 	start_new_level()
+ 
+func instantiate_new_tool_on_box(tool_to_spawn:Tool) -> Control:
+	var new_tool = tool_node.instantiate()
+	new_tool.setup(tool_to_spawn)
+	new_tool.tool_clicked.connect(_on_tool_clicked)
+	new_tool.position = Vector2(randi_range(0,200), randi_range(0,200))
+	box.add_child(new_tool)
+	return new_tool
 
 func _on_tool_clicked(tool:Tool):
 	print("on tool clicked: "+tool.name)

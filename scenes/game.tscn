@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cg6vyukprhaid"]
+[gd_scene load_steps=27 format=3 uid="uid://cg6vyukprhaid"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ff38m"]
 [ext_resource type="Texture2D" uid="uid://b5eyuf6ic8shf" path="res://images/caja.png" id="2_foy7i"]
@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://c48r2s7pcexe2" path="res://assets/tool1.tres" id="2_pxquy"]
 [ext_resource type="Resource" uid="uid://gmko6n0vpn3s" path="res://assets/tool1a.tres" id="3_1br1l"]
 [ext_resource type="Texture2D" uid="uid://duylwkpx6jsfr" path="res://images/objetos.png" id="3_3ifbq"]
-[ext_resource type="Texture2D" uid="uid://tlmy3pn36gq7" path="res://images/barratiempo.png" id="4_2nt25"]
 [ext_resource type="Resource" uid="uid://k2uu4fq3kyk7" path="res://assets/tool2.tres" id="4_i0fqd"]
 [ext_resource type="Resource" uid="uid://brs6aqtsd1w4y" path="res://assets/tool2a.tres" id="5_a21bo"]
 [ext_resource type="Resource" uid="uid://1g7566fbk4o3" path="res://assets/tool3.tres" id="6_h60qg"]
@@ -25,6 +24,8 @@
 [ext_resource type="Resource" uid="uid://wq7dx4wbifmb" path="res://assets/tool9a.tres" id="19_qxqrv"]
 [ext_resource type="Resource" uid="uid://baitt4pgiovwe" path="res://assets/tool10.tres" id="20_bkgjq"]
 [ext_resource type="Resource" uid="uid://4og4ex1q28fy" path="res://assets/tool10a.tres" id="21_7ncbv"]
+[ext_resource type="Texture2D" uid="uid://m6w0ovywfi62" path="res://images/barratiempo._color.png" id="24_y75gq"]
+[ext_resource type="Texture2D" uid="uid://dibnmymuxy7xf" path="res://images/barratiempo_peq.png" id="25_6ried"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_ff38m")
@@ -34,6 +35,7 @@ stuff = Array[Resource("res://assets/tool.gd")]([ExtResource("10_86dy8"), ExtRes
 [node name="Timer" type="Timer" parent="."]
 
 [node name="game" type="HBoxContainer" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -69,10 +71,19 @@ stretch_mode = 3
 layout_mode = 2
 stretch_mode = 3
 
-[node name="TextureRect" type="TextureRect" parent="game/VBoxContainer"]
+[node name="CenterContainer2" type="CenterContainer" parent="game/VBoxContainer"]
 layout_mode = 2
-size_flags_stretch_ratio = 0.0
-texture = ExtResource("4_2nt25")
+
+[node name="TextureRect2" type="TextureRect" parent="game/VBoxContainer/CenterContainer2"]
+layout_mode = 2
+texture = ExtResource("24_y75gq")
+
+[node name="TextureRect" type="TextureProgressBar" parent="game/VBoxContainer/CenterContainer2"]
+layout_mode = 2
+step = 0.1
+texture_progress = ExtResource("25_6ried")
+texture_progress_offset = Vector2(0, 1)
+tint_progress = Color(0.862745, 0.290196, 0, 1)
 
 [node name="Label" type="Label" parent="game/VBoxContainer"]
 layout_mode = 2
@@ -82,7 +93,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="intro" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmijyi8w5ui77"]
+[gd_scene load_steps=5 format=3 uid="uid://cmijyi8w5ui77"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_fq7yj"]
+[ext_resource type="PackedScene" uid="uid://cuv8mtn1eafl6" path="res://scenes/slider.tscn" id="2_s532l"]
 [ext_resource type="Script" path="res://scripts/credits_panel.gd" id="2_w2sgg"]
+[ext_resource type="AudioStream" uid="uid://dvl6wtuap0loi" path="res://sounds/music/Retro Comedy.ogg" id="4_8j87x"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,6 +29,12 @@ text = "PLAY_BUTTON"
 [node name="ButtonCredits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "CREDITS_BUTTON"
+
+[node name="SliderMusic" parent="VBoxContainer" instance=ExtResource("2_s532l")]
+layout_mode = 2
+
+[node name="SliderFSX" parent="VBoxContainer" instance=ExtResource("2_s532l")]
+layout_mode = 2
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
@@ -64,5 +72,17 @@ text = "CREDITS_TEXT_FONT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8j87x")
+volume_db = -27.532
+autoplay = true
+bus = &"Music"
+
+[node name="AudioStreamPlayerFSX" type="AudioStreamPlayer" parent="."]
+volume_db = -30.0
+bus = &"FSX"
+
 [connection signal="pressed" from="VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonCredits" to="." method="_on_button_credits_pressed"]
+[connection signal="value_update" from="VBoxContainer/SliderMusic" to="." method="_on_slider_music_value_update"]
+[connection signal="value_setted" from="VBoxContainer/SliderFSX" to="." method="_on_slider_fsx_value_setted"]
