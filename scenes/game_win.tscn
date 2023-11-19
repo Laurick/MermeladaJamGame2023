@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw3kr3vjbnytc"]
+[gd_scene load_steps=6 format=3 uid="uid://bw3kr3vjbnytc"]
 
 [ext_resource type="Script" path="res://scripts/game_win.gd" id="1_5goxp"]
 [ext_resource type="Theme" uid="uid://b0qdbfedic5wr" path="res://theme/default_theme.tres" id="2_d5x41"]
+[ext_resource type="Texture2D" uid="uid://do886snvv1b37" path="res://images/fondo_texto_win.jpg" id="2_dgigf"]
 [ext_resource type="Texture2D" uid="uid://6y3ge0yxb4qx" path="res://images/space.png" id="3_yd6m3"]
+[ext_resource type="Texture2D" uid="uid://dbx4wccfhgo8g" path="res://images/gato_4.png" id="5_brhq8"]
 
 [node name="win" type="Control"]
 layout_mode = 3
@@ -20,12 +22,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_dgigf")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 68.0
+offset_right = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -41,5 +48,19 @@ autowrap_mode = 2
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
 texture = ExtResource("3_yd6m3")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = -182.0
+offset_right = 91.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_brhq8")
+expand_mode = 2
