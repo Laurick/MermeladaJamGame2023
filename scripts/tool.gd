@@ -26,6 +26,7 @@ func _gui_input(event):
 				tool_clicked.emit(tool)
 			else:
 				var nodes = get_parent().get_children()
+				nodes.reverse()
 				for n in nodes:
 					if n.comsume_unhandled_click():
 						break

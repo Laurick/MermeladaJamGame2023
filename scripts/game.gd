@@ -147,7 +147,7 @@ func instantiate_new_tool_on_box(tool_to_spawn:Tool) -> Control:
 	return new_tool
 
 func _on_tool_clicked(tool:Tool):
-#	print("on tool clicked: "+tool.name)
+	#print("on tool clicked: "+tool.name)
 	if (tool.name == tool_to_find.name):
 		timer.stop()
 		success_guess()
