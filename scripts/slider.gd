@@ -5,6 +5,9 @@ extends HBoxContainer
 signal value_setted(new_value)
 signal value_update(new_value)
 
+func set_value(new_value):
+	slider.set_value_no_signal(new_value)
+
 func _on_h_slider_drag_ended(value_changed):
 	value_setted.emit(slider.value)
 

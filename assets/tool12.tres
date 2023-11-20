@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Tool" load_steps=3 format=3 uid="uid://cejkpkny6ap1l"]
 
-[ext_resource type="Texture2D" uid="uid://2ryrpgg171mr" path="res://images/herramienta_11a.png" id="1_1x5cm"]
+[ext_resource type="Texture2D" uid="uid://x33mkwjsa0mg" path="res://images/herramienta_12.png" id="1_6vnb2"]
 [ext_resource type="Script" path="res://assets/tool.gd" id="2_lkyhx"]
 
 [resource]
 script = ExtResource("2_lkyhx")
-name = "TOOL_11A"
-image = ExtResource("1_1x5cm")
+name = "raton_amarillo"
+image = ExtResource("1_6vnb2")

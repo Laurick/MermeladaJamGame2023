@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://mbre8cu4f7ng"]
+
+[ext_resource type="Texture2D" uid="uid://emclo68s0f3g" path="res://images/vulmen_y_fx.png" id="1_wvwtj"]
+
+[resource]
+texture = ExtResource("1_wvwtj")
+texture_margin_left = 7.58082
+texture_margin_top = 3.56745
+texture_margin_right = 8.1754
+texture_margin_bottom = 3.56745
+modulate_color = Color(0.168627, 0.00392157, 0.34902, 1)

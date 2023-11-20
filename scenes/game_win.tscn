@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bw3kr3vjbnytc"]
+[gd_scene load_steps=7 format=3 uid="uid://bw3kr3vjbnytc"]
 
 [ext_resource type="Script" path="res://scripts/game_win.gd" id="1_5goxp"]
 [ext_resource type="Theme" uid="uid://b0qdbfedic5wr" path="res://theme/default_theme.tres" id="2_d5x41"]
 [ext_resource type="Texture2D" uid="uid://do886snvv1b37" path="res://images/fondo_texto_win.jpg" id="2_dgigf"]
 [ext_resource type="Texture2D" uid="uid://6y3ge0yxb4qx" path="res://images/space.png" id="3_yd6m3"]
+[ext_resource type="LabelSettings" uid="uid://b0nhq81sj2vt7" path="res://theme/label_settings.tres" id="4_h6s7i"]
 [ext_resource type="Texture2D" uid="uid://dbx4wccfhgo8g" path="res://images/gato_4.png" id="5_brhq8"]
 
 [node name="win" type="Control"]
@@ -42,6 +43,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 theme = ExtResource("2_d5x41")
 text = "GAME_WIN"
+label_settings = ExtResource("4_h6s7i")
 vertical_alignment = 1
 autowrap_mode = 2
 

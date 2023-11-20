@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://pvvfj764nndo"]
+[gd_scene load_steps=3 format=3 uid="uid://pvvfj764nndo"]
 
+[ext_resource type="Texture2D" uid="uid://b8tp5oigfmk8r" path="res://images/herramienta_14a.png" id="1_5hje2"]
 [ext_resource type="Script" path="res://scripts/tool.gd" id="1_l715a"]
 
 [node name="tool" type="TextureRect"]
 scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_5hje2")
 script = ExtResource("1_l715a")

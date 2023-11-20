@@ -1,5 +1,8 @@
 extends Node
 
+func _ready():
+	$"/root/Audio".play_music("croquetillas")
+	
 func _gui_input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == 1:

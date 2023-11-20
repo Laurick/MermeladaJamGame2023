@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Tool" load_steps=3 format=3 uid="uid://cygjha6225psg"]
 
-[ext_resource type="Texture2D" uid="uid://dtha4el0248gy" path="res://images/herramienta_17.png" id="1_a8jsj"]
+[ext_resource type="Texture2D" uid="uid://p8f20qfo1f7" path="res://images/herramienta_18.png" id="1_jw8nk"]
 [ext_resource type="Script" path="res://assets/tool.gd" id="2_7gohb"]
 
 [resource]
 script = ExtResource("2_7gohb")
-name = "TOOL_17"
-image = ExtResource("1_a8jsj")
+name = "colgajo"
+image = ExtResource("1_jw8nk")

@@ -1,9 +1,9 @@
 keys,es,en
-PLAY_BUTTON,JUGAR,PLAY
+PLAY_BUTTON,Jugar,Play
 CREDITS_BUTTON,CREDITOS,CREDITS
 CREDITS_TEXT_FONT,"Fuentes: Shantell Sans Diseñada por Shantell Martin, Arrow Type y Anya Danilova","Font Shantell Sans Designed by Shantell Martin, Arrow Type and Anya Danilova"
 GAME_BY,"Capital Yelmo, Ildesir y Pzsuzume","Capital Yelmo, Ildesir y Pzsuzume"
-INTRO_GAME,"¡Prrrmiau!¡Soy el Barón Von Mitoncitos, tu amo y señor michil!\n\nTu misión es sencilla, simple mortal. El horrible Banco Nacional de Croquetillas ha amasado una fortuna en mi comida favorita: ¡Sí, croqueteillas! Así que tienes que ayudarme a democratizarlas, ¡con violencia y explosiones! ¡MIAU MIAU MIAU!\n\nConsígueme unas herramientas para fabricar la Llave Maestra Definitiva (una bomba miautástica). Pero ojo, no tenemos mucho tiempo, ya que los elementos y herramientas son altamente inestables.\n\n¡No perdamos tiempo y vayamos directos al ovillo!","no_text"
+INTRO_GAME,"¡Prrrmiau! ¡Soy el Barón Von Mitoncitos, tu amo y señor michil!\n\nTu misión es sencilla, simple mortal. El horrible Banco Nacional de Croquetillas ha amasado una fortuna en mi comida favorita: ¡croquetillas! Tienes que ayudarme a democratizarlas, ¡con violencia y explosiones! ¡MIAU MIAU MIAU!\n\nConsigue unas herramientas para fabricar una bomba miautástica. No tenemos mucho tiempo, ya que los elementos y herramientas son altamente inestables.\n\n¡No perdamos tiempo y vayamos directos al ovillo!","no_text"
 GAME_WIN,"¡Marramiau!\n\nLo has conseguido, la Llave Maestra Definitiva ha sido construida con éxito. Activemos la cuenta atrás...\n\n¡¡¡BOOOOOOOOOOOOOOOOOOOOOOOOOM!!\n\nEl Banco Nacional de Croquetillas ya no existe, así que podemos proceder a democratizar ese delicioso manjar. Y lo haremos ¡SÓLO PARA MÍ! ¡TODAS LAS CROQUETILLAS SON MÍAS AHORA!\n\nMiau, miau, ñom, ñom, miau, ñom\n\nAy, mi tripita...","no_text"
 GAME_OVER,"¡Pero qué haces, perro idiota!\n\nCon tu fracaso, el mundo está condenado a la hambruna y el pienso de baja calidad ¡PARA TI!\n\nA partir de ahora, me comeré tu pollito y salmoncito, e incluso me tomaré tu café mientras tu haces caca en la caja de arena.\n\nMewdiocre.","no_text"
 CAT1,¡El sindiGATO exige mimos!,"no_text"

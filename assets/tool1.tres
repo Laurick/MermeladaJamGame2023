@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("1_nrpar")
-name = "TOOL_1"
+name = "Destornillador_amarillo"
 image = ExtResource("1_uqit3")

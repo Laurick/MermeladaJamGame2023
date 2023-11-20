@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Tool" load_steps=3 format=3 uid="uid://1g7566fbk4o3"]
 
-[ext_resource type="Texture2D" uid="uid://cpisbsp6oq46l" path="res://images/herramienta_2a.png" id="1_f8p0k"]
+[ext_resource type="Texture2D" uid="uid://cunvgaayq74kq" path="res://images/herramienta_3.png" id="1_0c7kq"]
 [ext_resource type="Script" path="res://assets/tool.gd" id="2_8he2k"]
 
 [resource]
 script = ExtResource("2_8he2k")
-name = "TOOL_2A"
-image = ExtResource("1_f8p0k")
+name = "Alicates_amarillo"
+image = ExtResource("1_0c7kq")

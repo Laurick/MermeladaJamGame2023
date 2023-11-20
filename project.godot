@@ -15,12 +15,14 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 run/max_fps=60
 boot_splash/bg_color=Color(1, 0.815686, 0.627451, 1)
+boot_splash/image="res://images/logoteam_Mesa_de_trabajo_1.png"
 config/icon="res://icon.svg"
 
 [autoload]
 
 Constants="*res://scripts/constants.gd"
 Audio="*res://scenes/audio.tscn"
+Click="*res://scripts/click.gd"
 
 [display]
 

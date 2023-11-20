@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0jum1arlialf"]
+
+[ext_resource type="Texture2D" uid="uid://dd88an0h0g7tj" path="res://images/ronda_1.png" id="1_k6ol7"]
+[ext_resource type="Script" path="res://scripts/show.gd" id="2_36uvv"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 65.0
+offset_bottom = 61.0
+pivot_offset = Vector2(33, 31)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_k6ol7")
+stretch_mode = 4
+script = ExtResource("2_36uvv")

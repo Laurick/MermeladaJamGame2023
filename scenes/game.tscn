@@ -1,8 +1,7 @@
-[gd_scene load_steps=48 format=3 uid="uid://cg6vyukprhaid"]
+[gd_scene load_steps=51 format=3 uid="uid://cg6vyukprhaid"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ff38m"]
 [ext_resource type="Texture2D" uid="uid://b5eyuf6ic8shf" path="res://images/caja.png" id="2_foy7i"]
-[ext_resource type="Script" path="res://scenes/game_intro.gd" id="2_j3tni"]
 [ext_resource type="Resource" uid="uid://c48r2s7pcexe2" path="res://assets/tool1.tres" id="2_pxquy"]
 [ext_resource type="Resource" uid="uid://gmko6n0vpn3s" path="res://assets/tool1a.tres" id="3_1br1l"]
 [ext_resource type="Texture2D" uid="uid://duylwkpx6jsfr" path="res://images/objetos.png" id="3_3ifbq"]
@@ -29,10 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://bkg12mm4y4a5y" path="res://images/fondo.jpg" id="22_137rt"]
 [ext_resource type="Resource" uid="uid://cejkpkny6ap1l" path="res://assets/tool12.tres" id="24_fow54"]
 [ext_resource type="Texture2D" uid="uid://dylhdne8x7qep" path="res://images/herramienta_1.png" id="24_mgolo"]
-[ext_resource type="Texture2D" uid="uid://m6w0ovywfi62" path="res://images/barratiempo._color.png" id="24_y75gq"]
 [ext_resource type="Resource" uid="uid://drd3moyxep8im" path="res://assets/tool12A.tres" id="25_sfqgo"]
 [ext_resource type="Resource" uid="uid://6y620oei5p5h" path="res://assets/tool13.tres" id="26_88t4u"]
-[ext_resource type="Texture2D" uid="uid://dd88an0h0g7tj" path="res://images/ronda_1.png" id="27_1gx5o"]
 [ext_resource type="Resource" uid="uid://t5lubywak7l7" path="res://assets/tool13A.tres" id="27_ank3s"]
 [ext_resource type="Theme" uid="uid://b0qdbfedic5wr" path="res://theme/default_theme.tres" id="27_l05x8"]
 [ext_resource type="Resource" uid="uid://b61cx4xqp2ip7" path="res://assets/tool14.tres" id="28_kfys6"]
@@ -47,6 +44,12 @@
 [ext_resource type="Resource" uid="uid://cygjha6225psg" path="res://assets/tool18.tres" id="34_mdvr7"]
 [ext_resource type="Resource" uid="uid://cqo6cepyewk1l" path="res://assets/tool19.tres" id="35_mdody"]
 [ext_resource type="Resource" uid="uid://dlc0d5b216gsv" path="res://assets/tool19A.tres" id="36_xfwi7"]
+[ext_resource type="Texture2D" uid="uid://dibnmymuxy7xf" path="res://images/barratiempo_peq.png" id="41_vt105"]
+[ext_resource type="PackedScene" uid="uid://b0jum1arlialf" path="res://scenes/paw.tscn" id="42_syjvl"]
+[ext_resource type="Script" path="res://scripts/game_intro.gd" id="43_4x4g6"]
+[ext_resource type="LabelSettings" uid="uid://b0nhq81sj2vt7" path="res://theme/label_settings.tres" id="46_uj0eh"]
+[ext_resource type="Texture2D" uid="uid://fedhoupo13kh" path="res://images/texto_interrumpe.png" id="47_7b4jp"]
+[ext_resource type="Texture2D" uid="uid://dhwg7tmjapvg1" path="res://images/gato_1_con_outline.png" id="48_xr06o"]
 
 [node name="Node" type="Control"]
 layout_mode = 3
@@ -69,6 +72,14 @@ stretch_mode = 4
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="CatTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="CatTimer2" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -87,6 +98,10 @@ layout_mode = 2
 [node name="Control" type="MarginContainer" parent="MarginContainer/game"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = -1
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/game/Control"]
 layout_mode = 2
@@ -97,14 +112,17 @@ stretch_mode = 4
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/game"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 5
 alignment = 1
 
 [node name="Container" type="MarginContainer" parent="MarginContainer/game/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 size_flags_stretch_ratio = 3.0
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 0
 
 [node name="background" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container"]
 layout_mode = 2
@@ -118,59 +136,57 @@ texture = ExtResource("24_mgolo")
 expand_mode = 4
 stretch_mode = 5
 
-[node name="Container2" type="MarginContainer" parent="MarginContainer/game/VBoxContainer"]
+[node name="Container2" type="CenterContainer" parent="MarginContainer/game/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container2"]
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container2"]
+self_modulate = Color(0.862745, 0.290196, 0, 1)
 layout_mode = 2
 size_flags_vertical = 4
-texture = ExtResource("24_y75gq")
-expand_mode = 5
-stretch_mode = 4
+texture = ExtResource("41_vt105")
+stretch_mode = 1
 
-[node name="Container3" type="CenterContainer" parent="MarginContainer/game/VBoxContainer"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/game/VBoxContainer/Container2"]
 layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
+step = 0.05
+value = 100.0
+texture_progress = ExtResource("41_vt105")
+tint_progress = Color(0.164706, 0, 0.34902, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/game/VBoxContainer/Container3"]
-visible = false
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/game/VBoxContainer"]
+clip_contents = true
 layout_mode = 2
-theme_override_constants/separation = 10
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container3/HBoxContainer"]
+[node name="TextureRect" parent="MarginContainer/game/VBoxContainer/HBoxContainer" instance=ExtResource("42_syjvl")]
 layout_mode = 2
-texture = ExtResource("27_1gx5o")
-stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container3/HBoxContainer"]
+[node name="TextureRect2" parent="MarginContainer/game/VBoxContainer/HBoxContainer" instance=ExtResource("42_syjvl")]
 layout_mode = 2
-texture = ExtResource("27_1gx5o")
-stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container3/HBoxContainer"]
+[node name="TextureRect3" parent="MarginContainer/game/VBoxContainer/HBoxContainer" instance=ExtResource("42_syjvl")]
 layout_mode = 2
-texture = ExtResource("27_1gx5o")
-stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container3/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/game/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("27_1gx5o")
-stretch_mode = 5
+theme_override_constants/separation = 20
+alignment = 1
 
-[node name="TextureRect5" type="TextureRect" parent="MarginContainer/game/VBoxContainer/Container3/HBoxContainer"]
+[node name="TextureRect4" parent="MarginContainer/game/VBoxContainer/HBoxContainer2" instance=ExtResource("42_syjvl")]
 layout_mode = 2
-texture = ExtResource("27_1gx5o")
-stretch_mode = 5
+
+[node name="TextureRect5" parent="MarginContainer/game/VBoxContainer/HBoxContainer2" instance=ExtResource("42_syjvl")]
+layout_mode = 2
 
 [node name="intro" type="Control" parent="."]
-visible = false
 layout_mode = 2
 anchors_preset = 0
 offset_right = 960.0
 offset_bottom = 540.0
-script = ExtResource("2_j3tni")
+script = ExtResource("43_4x4g6")
 
 [node name="TextureRect2" type="TextureRect" parent="intro"]
 layout_mode = 1
@@ -198,7 +214,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme = ExtResource("27_l05x8")
+theme_override_font_sizes/font_size = 18
 text = "INTRO_GAME"
+label_settings = ExtResource("46_uj0eh")
 vertical_alignment = 1
 autowrap_mode = 2
 
@@ -214,13 +232,63 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 51.0
+offset_left = 30.0
 offset_top = -182.0
-offset_right = 91.0
+offset_right = 212.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("31_nt1wd")
 expand_mode = 2
 
+[node name="dialog" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -255.0
+offset_top = 72.0
+offset_right = 587.0
+offset_bottom = 453.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("47_7b4jp")
+
+[node name="Label" type="Label" parent="dialog"]
+layout_mode = 1
+offset_left = 46.0
+offset_top = 38.0
+offset_right = 478.0
+offset_bottom = 338.0
+theme = ExtResource("27_l05x8")
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="cat" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -145.0
+offset_top = 600.0
+offset_right = 626.0
+offset_bottom = 1126.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+mouse_filter = 2
+texture = ExtResource("48_xr06o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="click_thief" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CatTimer" to="." method="_on_cat_timer_timeout"]
+[connection signal="timeout" from="CatTimer2" to="." method="_on_cat_timer_2_timeout"]
 [connection signal="intro_pressed" from="intro" to="." method="_on_intro_intro_pressed"]
+[connection signal="gui_input" from="cat" to="." method="_on_cat_gui_input"]

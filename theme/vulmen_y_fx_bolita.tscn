@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg6agtibv6gg5"]
+
+[ext_resource type="Texture2D" uid="uid://b4yp0y7ah2l5n" path="res://images/vulmen_y_fx_bolita.png" id="1_7prlk"]
+
+[node name="VulmenYFxBolita" type="Sprite2D"]
+self_modulate = Color(0.862745, 0.290196, 0, 1)
+texture = ExtResource("1_7prlk")
