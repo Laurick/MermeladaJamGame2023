@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp6y7uwltxwtc"]
+
+[ext_resource type="Script" path="res://scripts/splash.gd" id="1_3612q"]
+[ext_resource type="Texture2D" uid="uid://d2xgnd7x5tuk8" path="res://images/logoteam_Mesa_de_trabajo_1.png" id="2_if32a"]
+
+[node name="splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3612q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -270.0
+offset_right = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(270, 270)
+texture = ExtResource("2_if32a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
