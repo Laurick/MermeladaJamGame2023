@@ -168,7 +168,7 @@ func hide_cat():
 
 func start_game():
 	click_thief.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var time = 2.5 - (level*0.2)
+	var time = 3 - (level*0.2)
 	#var time = 1000
 	timer.wait_time = time
 	timer.start()

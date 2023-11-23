@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cg6vyukprhaid"]
+[gd_scene load_steps=52 format=3 uid="uid://cg6vyukprhaid"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ff38m"]
 [ext_resource type="Texture2D" uid="uid://b5eyuf6ic8shf" path="res://images/caja.png" id="2_foy7i"]
@@ -44,6 +44,7 @@
 [ext_resource type="Resource" uid="uid://cygjha6225psg" path="res://assets/tool18.tres" id="34_mdvr7"]
 [ext_resource type="Resource" uid="uid://cqo6cepyewk1l" path="res://assets/tool19.tres" id="35_mdody"]
 [ext_resource type="Resource" uid="uid://dlc0d5b216gsv" path="res://assets/tool19A.tres" id="36_xfwi7"]
+[ext_resource type="Script" path="res://scenes/TextureRect.gd" id="39_gfp17"]
 [ext_resource type="Texture2D" uid="uid://dibnmymuxy7xf" path="res://images/barratiempo_peq.png" id="41_vt105"]
 [ext_resource type="PackedScene" uid="uid://b0jum1arlialf" path="res://scenes/paw.tscn" id="42_syjvl"]
 [ext_resource type="Script" path="res://scripts/game_intro.gd" id="43_4x4g6"]
@@ -108,6 +109,7 @@ layout_mode = 2
 texture = ExtResource("2_foy7i")
 expand_mode = 3
 stretch_mode = 4
+script = ExtResource("39_gfp17")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/game"]
 layout_mode = 2
@@ -182,6 +184,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="intro" type="Control" parent="."]
+visible = false
 layout_mode = 2
 anchors_preset = 0
 offset_right = 960.0
